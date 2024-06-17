@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="address_payment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <title>Your Address</title>
+</head>
+
+<body>
+
+  <div style="display: none;">
+    <div id="shopping_cart" class="shopping_cart_container">
+      <p style="margin: 20px">
+        Shopping cart <a onclick="clearCart()" id="clear_cart">Clear Cart</a>
+      </p>
+      <span class="cross_icon sign_in_up_close_btn" style="font-size: 35px"><i
+          class="fa-solid fa-circle-xmark"></i></span>
+      <hr />
+
+      <div id="label">
+      </div>
+      <div id="shopping_Cart_Items">
+        <div class="cart-box">
+        </div>
+      </div>
+      <div style="display: flex; margin: 10% 0% 5% 5%">
+        <p class="subtotal" style="font-size: 30px">Total :</p>
+        <h2 id="Total_cart_price"></h2>
+      </div>
+      <hr />
+      <a id="checkout" href="/Your Address.html">Checkout</a>
+    </div>
+
+    <div class="front_page">
+
+      <div class="nav_container">
+        <div class="logo">Ekart Market</div>
+        <div class="kart">
+          <div class="logged_in"></div>
+          <i style="font-size: 32px" class="user_login fa-solid fa-user"></i>
+          <div class="cart_containter_icon">
+            <i style="font-size: 32px" class="cart_icon fa-solid fa-cart-shopping"></i>
+            <div id="cartIcon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="main_container">
+      <div class="container">
+        <h2>Featured Products</h2>
+        <div id="featured_produts" class="Featured_Products">
+
+
+          <div class="product_catagory product-box">
+            <div class="product_catagory_img image_bg">
+              <img class="product_catagory_img product-img" src="Image/2.jpg" alt="" />
+            </div>
+            <h4 class="product-title">DNK Yellow Shoes</h4>
+
+            <div class="plus_minus_container">
+              <i class="plus_minus_icon fa-solid fa-minus"></i>
+              <div class="total_quantity">1</div>
+              <i class="plus_minus_icon fa-solid fa-plus"></i>
+            </div>
+
+            <p class="para_catagory">Men</p>
+            <p class="para_price price">₹499.00</p>
+            <a style="cursor: pointer" class="add_to_cart_item add-cart">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Address & Payment Area -->
+
+
+
+  <div class="overlayBackground"></div>
+
+
+  <div class="address_area">
+    <h2>Your Address</h2>
+    <div class="input_container">
+
+
+      <input type="text" placeholder="Enter name" id="username">
+      <input type="number" name="" id="mobile" required placeholder="10 digits Mobile No.">
+      <div class="select_div">
+        <select name="" id="state_list">
+          <option value="0">Select State</option>
+          <option value="1">Andhra Pradesh</option>
+          <option value="2">Arunachal Pradesh</option>
+          <option value="3">Assam</option>
+          <option value="4">Bihar</option>
+          <option value="5">Chhattisgarh</option>
+          <option value="6">Goa</option>
+          <option value="7">Gujarat</option>
+          <option value="8">Haryana</option>
+          <option value="9">Himachal Pradesh</option>
+          <option value="10">Jharkhand</option>
+          <option value="11">Karnataka</option>
+          <option value="13">Madhya Pradesh</option>
+          <option value="14">Maharashtra</option>
+          <option value="16">Odisha</option>
+          <option value="17">Punjab</option>
+          <option value="18">Rajasthan</option>
+          <option value="19">Tamil Nadu</option>
+          <option value="20">Telangana</option>
+          <option value="21">Uttar Pradesh</option>
+          <option value="22">Uttar Pradesh</option>
+          <option value="23">Uttarakhand</option>
+          <option value="24">West Bengal</option>
+        </select>
+      </div>
+      <input type="text" id="city" placeholder="Town/city">
+      <input type="number" name="" id="pincode" placeholder="6 digits Pincode">
+      <input type="text" id="locality" placeholder="Loaclity">
+      <input type="number" name="" id="flat_no" placeholder="Flat no.">
+    </div>
+    <a href=""><button id="submit_btn">Submit</button></a>
+    <div id="address_added" class="form_response">
+      <p>Your Address has Been Added<i class="fa-solid fa-circle-check"></i>
+      </p>
+    </div>
+
+    <div id="mandatory" class="form_response">
+      <p>All input fields are mandatory
+      </p>
+    </div>
+
+
+
+  </div>
+
+
+  <!-- payment container -->
+  <div class="payment_area">
+    <h2>Select a Payment method</h2>
+    <div class="paymentGateway">
+      <div><input value="1" class="input_radio" type="radio" name="makePayment" id="upi">UPI Apps <span>(Google Pay,
+          PhonePe,
+          Paytm)</span></div>
+      <div><input value="2" type="radio" name="makePayment" id="net_banking">Net Banking</div>
+      <div><input value="3" type="radio" name="makePayment" id="emi">EMI</div>
+      <div><input value="4" type="radio" name="makePayment" id="cod">Cash on Delivery</div>
+      <p class="please_select_payment_mode">Please select payment mode !</p>
+    </div>
+    <a><button class="continue_btn">Continue</button></a>
+  </div>
+
+
+  <div class="success_container">
+    <div class="ordered_successful">
+      <div class="success_img"><img src="Image/49.png" alt=""></div>
+      <div class="success_text">
+        <h3>Congratulation...!!</h3>
+        <h2>Your Order has been Placed</h2>
+        <a onclick="ClearAllItems(); return false; " href="/index.html"><button class="close_btn">Close</button></a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script>
+    let payment_area = document.querySelector(".payment_area");
+    let address_area = document.querySelector(".address_area");
+    let submit_btn = document.getElementById("submit_btn");
+    let address_added = document.getElementById("address_added");
+    let mandatory = document.getElementById("mandatory");
+
+    let success_container = document.querySelector(".success_container");
+    let continue_btn = document.querySelector(".continue_btn");
+    let please_select_payment_mode = document.querySelector(".please_select_payment_mode");
+
+
+
+
+
+    continue_btn.addEventListener("click", () => {
+      
+      let makePayment = document.getElementsByName("makePayment");
+      for (let i = 0; i <= makePayment.length; i++) {
+        if (makePayment[i].checked) {
+          payment_area.style.display = 'none';
+          success_container.style.display = 'block';
+          startConfetti();
+        }else{
+          please_select_payment_mode.style.display = 'block';
+        }
+      }
+
+    })
+
+  </script>
+  <script type="module" src="database.js"></script>
+  <script src="cartScript.js"></script>
+  <script src="/confetti.js"></script>
+</body>
+
+</html>

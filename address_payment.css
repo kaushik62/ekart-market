@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Poppins&family=Roboto&family=Ubuntu&display=swap");
+/* font-family: "Lato", sans-serif;
+font-family: "Poppins", sans-serif;
+font-family: "Roboto", sans-serif;
+font-family: "Ubuntu", sans-serif; */
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background-color: #d7f7fb2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.address_area {
+  box-sizing: border-box;
+  padding: 4%;
+  display: flex;
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  flex-wrap: wrap;
+  row-gap: 1%;
+  column-gap: 0%;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  width: 40%;
+  margin: 4%;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.709);
+}
+.address_area h2 {
+  width: 100%;
+  padding: 0%;
+  text-align: center;
+  margin-bottom: 4%;
+  font-size: 250%;
+  color: rgb(252, 252, 252);
+}
+.payment_area {
+  background-image: linear-gradient(
+    -225deg,
+    #473b7b 0%,
+    #3584a7 51%,
+    #30d2be 100%
+  );
+  box-sizing: border-box;
+  border-radius: 2%;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.709);
+  padding: 2.5% 3%;
+  animation: 0.35s payment_popup linear;
+}
+
+@keyframes payment_popup {
+  0% {
+    transform: scale(0.2);
+  }
+}
+
+input {
+  padding: 2% 4%;
+  margin: 1.5% 0%;
+  font-size: 18px;
+  border-radius: 5%;
+}
+
+.input_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  column-gap: 2%;
+}
+input:nth-child(1) {
+  width: 48%;
+}
+input:nth-child(2) {
+  width: 48%;
+}
+input:nth-child(3) {
+  width: 48%;
+}
+input:nth-child(4) {
+  width: 48%;
+}
+input:nth-child(5) {
+  width: 48%;
+}
+input:nth-child(6) {
+  width: 48%;
+}
+.address_area button {
+  margin: 5% 0% 0% 2%;
+  padding: 3% 17%;
+  background-color: orange;
+  border: none;
+  font-size: 120%;
+  border-radius: 5%;
+}
+.address_area button:active {
+  background-color: #ffc116;
+  color: black;
+  transform: scale(1.02);
+}
+.form_response {
+  margin-top: 5%;
+  font-size: 120%;
+  font-size: 17px;
+  text-align: center;
+  display: none;
+  animation: form_response 0.3s linear;
+}
+
+@keyframes form_response {
+  0% {
+    transform: scale(0.2);
+  }
+}
+@keyframes circle_round {
+}
+
+.payment_area h2 {
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-size: 145%;
+  margin-top: 5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+.paymentGateway {
+  padding: 15% 0%;
+  color: white;
+  font-size: 22px;
+}
+.paymentGateway input[type="radio"] {
+  margin: 5% 0%;
+  border: 0px;
+  width: 22px;
+  height: 22px;
+  margin-right: 4%;
+}
+.paymentGateway span {
+  font-size: 17px;
+  margin-left: 2%;
+}
+.payment_area button {
+  padding: 4% 10%;
+  font-size: 140%;
+  width: 100%;
+}
+.payment_area button:active {
+  background-color: #aaaaaa;
+  transform: scale(1.01);
+}
+.ordered_successful {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 360px;
+  border-radius: 2%;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.709);
+  background-color: rgb(237, 255, 252);
+  animation: success_popup 0.4s linear;
+}
+.success_container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+@keyframes success_popup {
+  0% {
+    transform: scale(0.2);
+  }
+}
+.success_img {
+  height: 40%;
+  width: 60%;
+  border-radius: 100%;
+}
+.success_text {
+  text-align: center;
+}
+.success_text h3 {
+  margin: -35% 0% 10% 0%;
+  font-size: 130%;
+}
+.success_img img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.close_btn {
+  margin: 0% 5%;
+  padding: 2% 30%;
+  font-size: 140%;
+  background-color: orange;
+  border: none;
+  margin-top: 10%;
+  border-radius: 5px;
+}
+.ordered_successful button:active {
+  background-color: rgb(24, 81, 115);
+  transform: scale(1.02);
+  color: white;
+}
+#submit_btn {
+  padding: 20% 150%;
+  margin: 50% 0% 5% 10%;
+}
+
+.overlayBackground {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.791);
+  display: none;
+}
+
+.payment_area {
+  display: none;
+}
+
+.continue_btn {
+  background-color: rgb(254, 213, 7);
+  border: none;
+  border-radius: 2%;
+}
+.select_div {
+  width: 48%;
+  border-radius: 5%;
+  text-align: center;
+}
+select {
+  padding: 5.5% 0%;
+  width: 100%;
+  text-align: center;
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+.please_select_payment_mode{
+  text-align: center;
+  margin-top:5%;
+  color: rgb(0, 0, 0);
+  animation: 0.35s select_payment_mode linear;
+  display: none;
+}
+@keyframes select_payment_mode {
+  0%{
+    transform: scale(0.2);
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(235, 255, 246);
+  }
+  .select_div {
+    border-radius: 5%;
+    text-align: center;
+    overflow-y: scroll;
+    width: 100%;
+    overflow: hidden;
+  }
+  select {
+    padding: 1.5% 0%;
+    width: 100%;
+    text-align: center;
+    font-size: 17px;
+    overflow-y: scroll;
+  }
+
+  .address_area {
+    box-sizing: border-box;
+    width: 100%;
+    background-image: linear-gradient(
+      -225deg,
+      #473b7b 0%,
+      #3584a7 51%,
+      #30d2be 100%
+    );
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.709);
+  }
+  .input_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2%;
+    padding: 7% 0%;
+  }
+  input {
+    padding: 2% 4%;
+    margin: 3% 0%;
+    font-size: 18px;
+    border-radius: 4%;
+    border: none;
+  }
+  input:nth-child(n) {
+    width: 100%;
+  }
+  .form_response {
+    position: absolute;
+    bottom: 21%;
+    left: 21%;
+  }
+}
